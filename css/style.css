@@ -1,0 +1,2307 @@
+@charset "UTP-8"
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 리셋 */
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+
+
+main {
+  overflow: hidden;
+}
+
+
+.wrap {
+  display: block;
+}
+
+/* 피씨헤더 */
+
+
+
+
+header .pcmenu {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  position: fixed;
+  background-color: #111111;
+  z-index: 1;
+  overflow: hidden;
+}
+
+header .logo a img {
+  width: 43px;
+  height: 40px;
+  position: absolute;
+  top: 30%;
+  left: 57px;
+
+}
+
+
+header nav ul.navlist {
+  display: flex;
+  color: #fff;
+  margin: 0 auto;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  right: 0px;
+  /* background-color: blue; */
+  justify-content: center;
+  align-items: center;
+
+}
+header nav ul.navlist li{
+  display: flex;
+  transition: 1s;
+  transition: all .2s ease-out;}
+
+header nav ul.navlist li h1 {
+  font-family: 'Pretendard-Regular';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  transition: 1s;
+  transition: all .2s ease-out;
+}
+
+header nav ul.navlist li div{
+  display: none;
+  background-color: #EA1836;
+  border-radius: 40px;
+  width: 5px;height: 5px;
+  transition: 1s;
+  transition: all .2s ease-out;
+  margin-left: 5px;
+}
+header nav ul.navlist li:hover div{
+  display: flex;
+  transition: 1s;
+}
+
+header nav ul.navlist li {
+  margin-right: 57px;
+
+}
+
+
+header nav ul.navlist li:nth-child(5) {
+  width: 130px;
+  height: 40px;
+  background: #EA1836;
+  border-radius: 22px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+header nav ul.navlist li:nth-child(5){
+  transition: 0.3s;
+
+
+}
+
+header nav ul.navlist li:nth-child(5):hover {
+
+  border-radius: 22px 22px 0 22px;
+
+}
+
+
+header .mlogo a img,
+header .hamBtn {
+  display: none;
+}
+
+/* 모바일헤더 */
+
+.momenu {
+  display: flex;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  padding: 10px 15.36px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111111;
+  position: fixed;
+  z-index: 1;
+  display: none;
+}
+
+.momenu .mlogo a img {
+  margin-top: 10px;
+  margin-left: 15px;
+  width: 206.21px;
+  height: 30px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.momenu .hamBtn {
+  display: block;
+  position: absolute;
+  right: 60px;
+  top: 25px;
+}
+
+.momenuoveray {
+  display: none;
+}
+
+
+
+@media (max-width:720px) {
+
+  header .pcmenu {
+    display: none;
+  }
+
+  header .momenu {
+    display: block;
+  }
+
+
+  .momenuoveray {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    transition: .1s;
+   
+  }
+
+  .momenuoveray .overlay-content ul {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .momenuoveray .overlay-content ul li a {
+    color: var(--golcompany-co-kr-gray, #808080);
+    text-align: center;
+    font-family: 'Pretendard-Regular';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    /* 136.364% */
+    letter-spacing: -1px;
+    margin-bottom: 26px;
+
+
+  }
+
+  .momenuoveray .overlay-content ul li {
+    margin: 26px auto 26px auto;
+    border-bottom: 1px solid #3c3c3c;
+  }
+
+
+  .momenu .hamBtn {
+    /* display: none; */
+  }
+
+  .momenuoveray .overlay a.closeBtn i {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    width: 40px;
+    height: 40px;
+
+  }
+
+
+}
+
+
+@media (min-width:721px)and (max-width:1200px) {
+  header .pcmenu {
+    display: none;
+  }
+
+  header .momenu {
+    display: block;
+  }
+
+  .momenuoveray {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    transition: .1s;
+
+  }
+
+  .momenuoveray .overlay-content ul {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .momenuoveray .overlay-content ul li a {
+    color: var(--golcompany-co-kr-gray, #808080);
+    text-align: center;
+    font-family: 'Pretendard-Regular';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    /* 136.364% */
+
+
+  }
+
+  .momenuoveray .overlay-content ul li {
+    margin: 26px auto 26px auto;
+    border-bottom: 1px solid #3c3c3c;
+  }
+
+
+
+  .momenu .hamBtn {
+    /* display: none; */
+  }
+
+  .momenuoveray .overlay a.closeBtn i {
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    width: 40px;
+    height: 40px;
+
+  }
+
+
+
+}
+
+
+
+
+
+
+/* 퀵 */
+.quick {
+  width: 60px;
+  height: 270px;
+  /* background-color: aqua; */
+  z-index: 9;
+  position: fixed;
+  right: 23px;
+  bottom: 20%;
+
+}
+
+.quick ul li {
+  margin-bottom: 10px;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.quick ul li:nth-child(1) {
+  background: #F9E000;
+}
+
+.quick ul li:nth-child(2) {
+  background: #FFF;
+}
+
+.quick ul li:nth-child(3) {
+  background: #222;
+}
+
+.quick ul li:nth-child(4) {
+  background: #FFF;
+  text-align: center;
+}
+
+.quick ul li:nth-child(4) i {
+  color: #000;
+  /* font-family: Inter; */
+  font-size: 30px;
+  /* font-style: normal; */
+  /* font-weight: 400; */
+  line-height: 62px;
+  /* 206.667% */
+}
+
+.quick ul li:hover,
+.quick ul li:focus {
+  transition: 0.3s;
+  border-radius: 25px 25px 0 25px;
+
+}
+
+
+.quick ul li a img {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 12px 13px 12px;
+}
+
+
+@media (max-width:720px) {
+  .quick {
+    width: 60px;
+    height: 270px;
+    /* background-color: aqua; */
+    z-index: 9;
+    position: fixed;
+    /* right: 23px; */
+    bottom: 3%;
+    right: 10px;
+  }
+
+  .quick ul li {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+  }
+
+  .quick ul li a img {
+    width: 20px;
+    height: 20px;
+    /* flex-shrink: 0;
+    display: block;
+    justify-content: center;
+    align-items: center; */
+    /* padding: 11px 12px 13px 12px; */
+  }
+
+}
+
+
+
+
+/* 메인 */
+.main {
+  width: 100%;
+  height: 100vh;
+  /* background-color: gray; */
+  position: relative;
+}
+
+.videoandtextwrap {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0px auto;
+  position: relative;
+
+}
+
+.vimeowrap {
+  justify-content: center;
+  display: flex;
+
+}
+
+video {
+
+  margin: 0 auto;
+  width: 1920px;
+  /* height: 100%; */
+}
+
+.main .logo {
+  position: absolute;
+  bottom: 0;
+}
+
+.main .mainText {
+  position: absolute;
+  top: 50%;
+  margin-left: 150px;
+  /* background-color: red; */
+}
+
+.main .mainText span {
+  width: 10px;
+  height: 10px;
+  border-radius: 7px 7px 0px 7px;
+  background: #EA1836;
+  position: absolute;
+  top: 0px;
+  margin-left: 0px;
+  display: block;
+}
+
+.main .mainText h1::before {
+  content: "";
+  /* position: relative; */
+  width: 14px;
+  height: 14px;
+  border-radius: 7px 7px 0px 7px;
+  background-color: #EA1836;
+  z-index: 1;
+
+}
+
+.main .mainText h1 {
+  color: #FFF;
+  font-family: 'Pretendard-Regular';
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 85px;
+  /* 121.429% */
+
+}
+
+.main .mainText h2 {
+  color: #FFF;
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 26px;
+}
+
+
+
+@media (max-width:720px) {
+
+
+  .main .mainText {
+    margin-left: 38px;
+  }
+
+
+  .main .mainText h2 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+
+    /* golcompany.co.kr/Inter/Regular 20 */
+    font-family: 'Pretendard-Regular';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .main .mainText h1 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: 'Pretendard-Regular';
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 65px;
+  }
+
+}
+
+@media (min-width:721px)and (max-width:1200px) {
+
+  .main {
+    position: relative;
+  }
+
+  .main .mainText {
+    position: absolute;
+    left: -100px;
+    top: 370px;
+    /* background-color: blue; */
+  }
+
+  .main .mainText h1 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: 'Pretendard-Regular';
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 65px;
+    /* 130% */
+  }
+
+
+  .main .mainText h2 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+
+    /* golcompany.co.kr/Inter/Regular 20 */
+    font-family: 'Pretendard-Regular';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+  }
+}
+
+
+
+
+
+
+
+
+/* 소개 */
+
+.intro {
+  width: 100%;
+  height: 550px;
+  border-radius: 0px 0px 0px 180px;
+  background: #EA1836;
+  position: relative;
+}
+
+.intro .introtext1 {
+  position: absolute;
+  left: 150px;
+  top: 111px;
+  /* background-color:blue; */
+}
+
+
+.intro .introtext1 h1 {
+  color: #FFF;
+  font-family: Outfit;
+  font-size: 85px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+}
+
+.intro .introtext1 h2 {
+  color: #FFF;
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 19px;
+}
+
+.introimg {
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+}
+
+.introimg a img {
+  /* position: absolute; */
+
+  /* margin: 100px 30%; */
+  display: flex;
+  width: 500px;
+  /* background-color: #F9E000; */
+}
+
+.intro .introtext2 {
+  /* background-color: blue; */
+  position: absolute;
+  top: 185px;
+  right: 180px;
+}
+
+.intro .introtext2 .count {
+  color: #FFF;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 35px;
+
+}
+
+.intro .introtext2 h1 {
+  color: #FFF;
+  font-family: 'Pretendard-Regular';
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 65px;
+
+}
+
+.intro .introtext2 h2 {
+  color: #FFF;
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 37px;
+}
+
+
+
+
+@media (max-width:720px) {
+
+  .intro {
+    width: 100%;
+    height: 978px;
+    position: relative;
+    border-radius: 0px 0px 0px 100px;
+    background: var(--golcompany-co-kr-crimson, #EA1836);
+  }
+
+  .intro .wrap {
+    position: absolute;
+    display: block;
+    margin-left: 38px;
+    /* background-color: #F9E000; */
+  }
+
+  .intro .wrap .introtext1 {
+    position: absolute;
+    margin-left: 0;
+    left: 0;
+    top: 70px;
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: Outfit;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    /* 116.667% */
+    /* background-color: blue; */
+  }
+
+
+  .intro .wrap .introtext1 h1 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: Outfit;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    /* 116.667% */
+
+  }
+
+
+  .intro .wrap .introtext1 h2 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: 'Pretendard-Regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 155.556% */
+  }
+
+  .intro .wrap .introtext2 {
+    margin-top: 140px;
+    width: 547.77px;
+    max-width: 691px;
+    /* background-color: blue; */
+    left: 0;
+  }
+
+  .intro .wrap .introtext2 h1 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: 'Pretendard-Regular';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 55px;
+    /* 137.5% */
+  }
+
+  .intro .wrap .introtext2 h2 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: 'Pretendard-Regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 20px;
+    line-height: 26px;
+    /* 144.444% */
+
+  }
+
+  .intro .introimg a {
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    /* background-color: blue; */
+
+  }
+
+  .intro .introimg a img {
+    /* display: flex; */
+    /* position: absolute; */
+    width: 400px;
+    /* height: 359px; */
+    /* padding: 89.75px 160px 77.25px 200px; */
+    /* justify-content: flex-end; */
+    /* align-items: center; */
+    margin-top: 500px;
+  }
+
+
+}
+
+@media (min-width:721px)and (max-width:1200px) {
+  .intro {
+    width: 100%;
+    height: 978px;
+    position: relative;
+  }
+
+  .intro .wrap .introtext1 {
+    /* background-color: blue; */
+    top: 100px;
+    left: 60px;
+    position: absolute;
+
+
+  }
+
+  .intro .wrap .introtext1 h1 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: Outfit;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    /* 116.667% */
+
+  }
+
+  .intro .wrap .introtext1 h2 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: 'Pretendard-Regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 155.556% */
+  }
+
+  .intro .wrap .introtext2 {
+    /* background-color: blue; */
+    position: absolute;
+    top: 320px;
+    left: 60px;
+  }
+
+  .intro .wrap .introtext2 h1 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: 'Pretendard-Regular';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 55px;
+    /* 137.5% */
+
+  }
+
+  .intro .wrap .introtext2 h2 {
+
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: 'Pretendard-Regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    /* 144.444% */
+  }
+
+  .intro .introimg a {
+    /* background-color: #F9E000; */
+    display: flex;
+    justify-content: center;
+  }
+
+  .introimg a img {
+    display: flex;
+    position: absolute;
+    top: 483px;
+    /* margin: auto; */
+    /* background-color: blue; */
+
+  }
+
+
+
+
+
+}
+
+
+/* 고객 */
+
+.clients {
+  width: 100%;
+  height: 610px;
+  position: relative;
+  /* background-color: aquamarine; */
+}
+
+.clients .wrap {
+  width: 100%;
+  height: 610px;
+  position: relative;
+  /* background-color: aquamarine; */
+
+}
+
+.listwrap {
+  display: block;
+  position: absolute;
+  top: 270px;
+  width: 100%;
+  overflow: hidden;
+}
+
+ul.clslidelist {
+  display: flex;
+  display: flex;
+  gap: 20px;
+  /* background-color: blue; */
+}
+
+ul.clslidelist2 {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  /* background-color: red; */
+}
+
+ul.clslidelist li a img {
+  width: 225px;
+  height: 90px;
+}
+
+ul.clslidelist2 li a img {
+  width: 225px;
+  height: 90px;
+}
+
+
+.clientstext {
+  /* background-color: blue; */
+  position: absolute;
+  display: flex;
+  left: 150px;
+  top: 130px;
+
+}
+
+.clientstext h1 {
+  color: #222;
+  font-family: Outfit;
+  font-size: 85px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 85px;
+}
+
+.clientstext h2 {
+  color: #222;
+  font-family: Outfit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  margin-left: 17px;
+  padding-top: 24px;
+}
+
+
+@media (max-width:720px) {
+
+  .clients {
+    position: relative;
+  }
+
+  .clientstext {
+    /* background-color: blue; */
+    position: absolute;
+    left: 38px;
+    display: block;
+  }
+
+  .clientstext h1 {
+    color: var(--golcompany-co-kr-mine-shaft, #222);
+    font-family: Outfit;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 50px;
+    /* 100% */
+
+  }
+
+  .clientstext h2 {
+    color: var(--golcompany-co-kr-mine-shaft, #222);
+    font-family: 'Pretendard-Regular';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    margin-left: 0;
+    /* background-color: blue; */
+    /* 144.856% */
+
+  }
+
+  ul.clslidelist li a img {
+    width: 145px;
+    height: 60px;
+    align-self: stretch;
+
+  }
+
+  ul.clslidelist2 li a img {
+    width: 145px;
+    height: 60px;
+    align-self: stretch;
+  }
+
+}
+
+@media (min-width:721px)and (max-width:1200px) {
+  .clients {
+    position: relative;
+  }
+
+
+  .clientstext {
+    position: absolute;
+    top: 100px;
+    left: 60px;
+
+  }
+
+  .clientstext h1 {
+    color: var(--golcompany-co-kr-mine-shaft, #222);
+    font-family: Outfit;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 50px;
+    /* 100% */
+  }
+
+  .clientstext h2 {
+    color: var(--golcompany-co-kr-mine-shaft, #222);
+    font-family: 'Pretendard-Regular';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    /* 144.856% */
+
+  }
+
+}
+
+
+
+
+
+
+/* 포폴 */
+
+.porttext span {
+  width: 10px;
+  height: 10px;
+  border-radius: 7px 7px 0px 7px;
+  background: #EA1836;
+  /* position: absolute; */
+  top: 0px;
+  margin-left: 0px;
+  display: block;
+  z-index: 1;
+}
+
+.port {
+  width: 100%;
+  height: 1500px;
+  background-color: #F6F3F3;
+}
+
+.porttext {
+  /* background-color: blue; */
+  display: flex;
+  margin-left: 150px;
+  margin-top: 160px;
+  position: absolute;
+}
+
+.porttext .wrap {
+  display: flex;
+}
+
+.porttext h1 {
+  color: #222;
+  text-align: center;
+  font-family: Outfit;
+  font-size: 85px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 85px;
+}
+
+.porttext h2 {
+  color: #222;
+  /* text-align: center; */
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+  margin-left: 17px;
+  padding-top: 24px;
+
+}
+
+.portlistwrap {
+  /* margin: 64px auto 0px auto; */
+  /* background-color: aqua; */
+  /* justify-content: center; */
+  padding-top: 300px;
+
+}
+
+ul.portlist {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex: 3; */
+  /* overflow: hidden; */
+  max-width: 1000px;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  /* flex: 1;
+  width: 100%;
+  height: 100%; */
+
+
+
+}
+
+
+ul.portlist {
+  display: flex;
+  flex-wrap: wrap;
+  /* overflow: auto; */
+  max-width: 1000px;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+  /* flex: 1;
+  width: 100%;
+  height: 100%; */
+
+
+
+}
+
+ul.portlist li {
+  flex: 0 0 33%;
+  /* 3개의 열을 유지하기 위해 flex 속성을 조정 */
+  box-sizing: border-box;
+  /* 패딩을 너비 계산에 포함 */
+  padding: 5px;
+  margin: 0;
+  height: 33%;
+  /* 기본 마진을 제거 */
+  transition: 0.3s;
+}
+
+ul.portlist li:nth-child(1) {
+  flex: 1;
+  /* margin-right:1%; */
+  width: 33%;
+  height: 33%;
+  padding: 150px;
+  margin: 5px;
+  background: url('../images/thumb-71_copy1_113_e3ca2a89491bbbb26681dc1db4b9121d_emKr2yL8_f3300a90740eafb16f33a3cea88a88d4e964351.jpg') center/cover;
+}
+
+ul.portlist li:nth-child(2) {
+  flex: 1;
+  /* margin-right:1%; */
+  width: 33%;
+  height: 33%;
+  padding: 150px;
+  margin: 5px;
+  background: url('../images/thumb-70_copy1_112_e3ca2a89491bbbb26681dc1db4b9121d_xCSeastO_fce904a602b90cfd47585df5d9f1c2d4158850d.jpg')no-repeat center/cover;
+}
+
+ul.portlist li:nth-child(3) {
+  flex: 1;
+  /* margin-right:1%; */
+  width: 33%;
+  height: 33%;
+  padding: 150px;
+  margin: 5px;
+  background: url('../images/thumb-69_copy1_111_e3ca2a89491bbbb26681dc1db4b9121d_nHfMZtKY_212124d79c653682c93a4eb3f7e7bdeb96cccc1.jpg')no-repeat center/cover;
+}
+
+ul.portlist li:nth-child(4) {
+  flex: 1;
+  /* margin-right:1%; */
+  width: 33%;
+  height: 33%;
+  padding: 150px;
+  margin: 5px;
+  background: url('../images/thumb-67_copy1_110_e3ca2a89491bbbb26681dc1db4b9121d_qFW5mjV2_b3ae92f5a7105a0d68b6d866c30f3c848beb773.jpg')no-repeat center/cover;
+}
+
+ul.portlist li:nth-child(5) {
+  flex: 1;
+  /* margin-right:1%; */
+  width: 33%;
+  height: 33%;
+  padding: 150px;
+  margin: 5px;
+  background: url('../images/thumb-66_copy1_109_e3ca2a89491bbbb26681dc1db4b9121d_pWUxuPi6_2af87526009fe0c8bdb5414094e870a80408e4b.jpg')no-repeat center/cover;
+}
+
+ul.portlist li:nth-child(6) {
+  flex: 1;
+  /* margin-right:1%; */
+  width: 33%;
+  height: 33%;
+  padding: 150px;
+  margin: 5px;
+  background: url('../images/thumb-64_copy1_108_e3ca2a89491bbbb26681dc1db4b9121d_wUMxRGKH_0137c4b8ee6dab945e79ee7d055e361f5eb1212.jpg')no-repeat center/cover;
+}
+
+ul.portlist li:nth-child(7) {
+  flex: 1;
+  /* margin-right:1%; */
+  width: 33%;
+  height: 33%;
+  padding: 150px;
+  margin: 5px;
+  background: url('../images/thumb-63_copy1_107_e3ca2a89491bbbb26681dc1db4b9121d_e4qjt3nY_9dc1be9b8c627335f8e342c12ad2020b1e06666.jpg')no-repeat center/cover;
+}
+
+ul.portlist li:nth-child(8) {
+  flex: 1;
+  /* margin-right:1%; */
+  width: 33%;
+  height: 33%;
+  padding: 150px;
+  margin: 5px;
+  background: url('../images/thumb-61_copy1_106_e3ca2a89491bbbb26681dc1db4b9121d_N5VSBLJq_2271e1e9b2d338362080a42e7bb96e3d7b4ee0b.jpg')no-repeat center/cover;
+}
+
+ul.portlist li:nth-child(9) {
+  flex: 1;
+  /* margin-right:1%; */
+  width: 33%;
+  height: 33%;
+  padding: 150px;
+  margin: 5px;
+  background: url('../images/thumb-60_copy1_105_e3ca2a89491bbbb26681dc1db4b9121d_WtpX9oPB_944eccd3f892f4b123099c3d8dae9a94409b455.jpg')no-repeat center/cover;
+}
+
+
+ul.portlist li:hover,
+ul.portlist li:focus {
+  /* transition: 0.3s; */
+  border-radius: 100px 100px 0 100px;
+
+}
+
+ul.portlist li a img {
+  flex: 1;
+
+  width: 33%;
+  height: 33%;
+  /* padding: 150px; */
+  margin: 5px;
+
+}
+
+
+.port .more {
+  display: flex;
+  width: 89.17px;
+  height: 40px;
+  /* padding: 10px 21.8px 11px 22px; */
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #222;
+  color: #FFF;
+  text-align: center;
+  font-family: 'Pretendard-Regular';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  margin: 95px auto 150px auto;
+}
+
+
+
+@media (max-width:720px) {
+
+
+  .port {
+    position: relative;
+    width: 100%;
+    height: 2160px;
+    /* overflow: hidden; */
+  }
+
+  .port .porttext {
+    margin-left: 38px;
+  }
+
+  .port .porttext .wrap {
+    display: block;
+    justify-content: left;
+    /* background-color: blue; */
+  }
+
+
+  .port .porttext h1 {
+    color: var(--golcompany-co-kr-mine-shaft, #222);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 50px;
+    /* 100% */
+
+  }
+
+  .port .porttext h2 {
+    color: var(--golcompany-co-kr-mine-shaft, #222);
+    font-family: 'Pretendard-Regular';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    /* 122.222% */
+    text-align: left;
+    margin-left: -2px;
+
+  }
+
+  .portlist {
+    width: 100%;
+    height: 1600px;
+    overflow: hidden;
+  }
+
+
+}
+
+@media (min-width:721px)and (max-width:1200px) {
+  .port {
+    position: relative;
+    width: 100%;
+    height: 1500px;
+  }
+
+  .porttext {
+    position: absolute;
+    /* background-color: green; */
+    margin-top: 100px;
+    margin-left: 60px;
+  }
+
+  .portlist {
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+
+  }
+
+
+  .porttext .wrap h1 {
+    color: var(--golcompany-co-kr-mine-shaft, #222);
+    text-align: center;
+    font-family: 'Outfit';
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 50px;
+    /* 100% */
+
+  }
+
+  .porttext .wrap h2 {
+    color: var(--golcompany-co-kr-mine-shaft, #222);
+    font-family: 'Pretendard-Regular';
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    /* 122.222% */
+
+  }
+
+}
+
+
+
+
+
+/* 리뷰 */
+
+.review {
+  width: 100%;
+  height: 1050px;
+  /* background-color: green; */
+  position: relative;
+}
+
+.reviewandlistwrap {
+  /* background-color: aqua; */
+  /* height: 1050px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+ul.reviewlist li {
+  height: 160px;
+  max-width: 750px;
+  padding: 20px 30px 20px 30px;
+  margin-top: 20px;
+  border-radius: 30px;
+  background: #FAF9F9;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+
+
+
+
+.reviewlist li .imgandtextwrap {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+
+}
+
+.reviewlist li .imgandtextwrap .textwrap {
+  margin-left: 24px;
+}
+
+.reviewlist li .imgandtextwrap .textwrap .title {
+  color: #000;
+  font-family: 'Pretendard-Regular';
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.reviewlist li .imgandtextwrap .textwrap p {
+  color: #000;
+  font-family: 'Pretendard-Regular';
+  font-size: 13.242px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 10px;
+}
+
+.reviewwrap {
+  /* background-color: blue; */
+  margin-left: 140px;
+}
+
+.reviewwrap .wrap {
+  margin-top: 50px;
+}
+
+.review .reviewwrap .reviewtext .wrap {
+  /* background-color:  green; */
+  display: flex;
+}
+
+.review .reviewwrap .reviewtext .wrap .like {
+  display: flex;
+  width: 99.95px;
+  /* padding: 11px 19.685px 11px 20px; */
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 22px;
+  background: #EA1836;
+  color: #FFF;
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-left: 14px;
+}
+
+
+.reviewwrap h2 {
+  margin-top: 37px;
+  color: #000;
+  font-family: 'Pretendard-Regular';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+
+@media (max-width:720px) {
+
+  .review {
+    width: 100%;
+    height: 1296px;
+    /* background-color: green; */
+    position: relative;
+    display: block;
+  }
+
+  .reviewandlistwrap {
+    /* background-color: green; */
+    display: block;
+    width: 100%;
+
+  }
+
+  .listwrap {
+    width: 100%;
+    display: block;
+    left: -30px;
+    margin: 0 auto;
+    /* margin-left: 50px; */
+  }
+
+
+  .reviewwrap {
+    margin-top: 80px;
+    /* background-color: blue; */
+    margin-left: 60px;
+  }
+
+  .reviewwrap .logo a img {
+    width: 34px;
+    height: 30px;
+    flex-shrink: 0;
+
+  }
+
+
+
+  .reviewwrap h2 {
+    color: var(--golcompany-co-kr-black, #000);
+    font-family: 'Pretendard-Regular';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    /* 144.444% */
+
+  }
+
+
+  ul.reviewlist {
+    /* background-color: red; */
+    display: block;
+    justify-content: center;
+    margin: auto 38px;
+  }
+
+
+  ul.reviewlist li {
+
+    max-width: 800px;
+
+
+    height: 130px;
+    display: flex;
+
+    border-radius: 30px;
+  }
+
+
+
+
+
+
+
+  .reviewlist li .imgandtextwrap a img {
+    width: 77.53px;
+    height: 80px;
+  }
+
+
+  .reviewlist li .imgandtextwrap .textwrap .title {
+    color: var(--golcompany-co-kr-black, #000);
+
+    /* golcompany.co.kr/Inter/Bold 22 */
+    font-family: 'Pretendard-Regular';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+}
+
+@media (min-width:721px)and (max-width:1200px) {
+  .review {
+    position: relative;
+    width: 100%;
+    height: 1396px;
+  }
+
+  .reviewandlistwrap {
+    /* background-color: green; */
+
+    display: block;
+
+
+    /* position: absolute; */
+
+
+  }
+
+  .reviewwrap {
+    margin-left: 60px;
+  }
+
+  .reviewwrap .logo a img {
+    width: 34px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  .reviewwrap .reviewtext .wrap h1 {}
+
+    {}
+
+  ul.reviewlist {
+    /* background-color: red; */
+    display: block;
+    /* justify-content: center; */
+    margin: 100px 60px;
+
+
+  }
+
+  ul.reviewlist li {
+    max-width: 1200px;
+    height: 140px;
+  }
+
+  ul.reviewlist li .imgandtextwrap {
+    margin-top: 26px;
+
+  }
+
+  ul.reviewlist li .imgandtextwrap a img {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+
+
+  .review .reviewandlistwrap .listwrap ul.reviewlist li .imgandtextwrap .textwrap .title {
+    color: var(--golcompany-co-kr-black, #000);
+
+    /* golcompany.co.kr/Inter/Bold 22 */
+    font-family: 'Pretendard-Regular';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+}
+
+
+
+/* 유튭 */
+
+.youtube {
+  width: 100%;
+  height: 844px;
+  background-color: #EA1836;
+  border-radius: 180px 0px 0px 0px;
+  position: relative;
+  overflow: hidden;
+}
+
+.youtube .logo {
+  width: 570px;
+  height: 334px;
+  flex-shrink: 0;
+  position: absolute;
+  left: 288px;
+
+}
+
+.youtube .wrap {
+  /* position: absolute; */
+  padding-top: 140px;
+  /* background-color: green; */
+
+}
+
+.youtube h1 {
+  margin-left: 150px;
+
+  color: #FFF;
+  font-family: Outfit;
+  font-size: 85px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+
+.youlistwrap {
+  /* background-color: green; */
+  width: 100%;
+  /* margin: 0 auto; */
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  /* margin-top: 40px; */
+
+}
+
+
+ul.youlist {
+  /* background-color: blue; */
+  max-width: 100%;
+  display: flex;
+  gap: 32px;
+  /* margin-top: 40px; */
+  /* justify-content: center; */
+  /* text-align: center; */
+  margin: 60px;
+}
+
+
+
+
+
+ul.youlist li .thumb a img {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+
+}
+
+ul.youlist li .thumb a img:hover,
+ul.youlist li .thumb a img:focus {
+  border-radius: 100px 100px 0 100px;
+}
+
+
+ul.youlist li .thumb p {
+  color: #FFF;
+  text-align: center;
+  font-family: 'Pretendard-Regular';
+  font-size: 20.063px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: -0.5px;
+}
+
+
+
+@media (max-width:720px) {
+
+  .youtube {
+    width: 100%;
+    position: relative;
+    height: 1100px;
+    display: flex;
+    padding: 0px 0px 160px 0px;
+    flex-direction: column;
+    /* align-items: center;
+transform: translateX(-25%); */
+    align-self: stretch;
+  }
+
+  .youtube .wrap h1 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: Outfit;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    position: absolute;
+    margin-left: 0;
+    margin-left: 38px;
+
+
+  }
+
+  .youtube .wrap .youlistwrap {
+    position: absolute;
+    width: 100%;
+    /* background-color: blue; */
+    margin: auto;
+    align-items: center;
+
+
+  }
+
+  .youtube .wrap .youlistwrap {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .youtube .wrap .youlistwrap .youlist {
+    display: block;
+    width: 100%;
+    max-width: 720px;
+    margin: auto;
+    position: absolute;
+    top: 100px;
+    text-align: center;
+    /* background-color: blue; */
+
+  }
+
+  .youtube .wrap .youlistwrap .youlist li {
+    margin-top: 20px;
+
+  }
+
+  .youtube .wrap .youlistwrap .youlist li .thumb a img {
+    width: 80%;
+    height: 80%;
+    /* height: 226px; */
+  }
+
+  .youtube .wrap .youlistwrap .youlist li p {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    text-align: center;
+    font-family: 'Pretendard-Regular';
+    font-size: 13.375px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 179.439% */
+    letter-spacing: -0.5px;
+  }
+
+}
+
+@media (min-width:721px)and (max-width:1200px) {
+  .youtube {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    padding: 0px 0px 160px 0px;
+    flex-direction: column;
+    /* align-items: center;
+  transform: translateX(-25%); */
+    align-self: stretch;
+
+  }
+
+  .youtube .wrap h1 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+
+    /* golcompany.co.kr/Outfit/ExtraBold 50 */
+    font-family: Outfit;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-left: 60px;
+
+  }
+
+  .youtube .wrap .youlistwrap {}
+
+  .youtube .wrap .youlistwrap .youlist {
+    /* background-color: blue; */
+    max-width: 100%;
+    display: flex;
+    margin: 60px;
+  }
+
+  .youtube .wrap .youlistwrap .youlist li .thumb a img {
+    width: 100%;
+    height: 100%;
+    /* height: 226px; */
+  }
+
+  .youtube .wrap .youlistwrap .youlist li p {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    text-align: center;
+    font-family: 'Pretendard-Regular';
+    font-size: 13.625px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    /* 176.147% */
+    letter-spacing: -0.5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 푸터 */
+
+/* 피씨푸터 */
+
+.mft {
+  display: none;
+}
+
+footer {
+  width: 100%;
+  height: 693px;
+  background-color: #111111;
+  color: #FFF;
+  position: relative;
+}
+
+footer .logocircle {
+  position: relative;
+  width: 148px;
+  height: 148px;
+  top: -70px;
+  align-items: center;
+  margin: 0 auto;
+  /* background-color: blue; */
+  z-index: 2;
+}
+
+footer .wrap {
+  position: relative;
+}
+
+.ftwrap {
+  display: flex;
+  padding-top: -20px;
+  margin-left: 150px;
+  /* background-color: #F9E000; */
+}
+
+
+.footext1 h2 {
+  margin-top: 95px;
+
+}
+
+.footext1 .num {
+  margin-top: 46px;
+  display: flex;
+  text-decoration: underline;
+}
+
+.footext1 .num div {
+  display: flex;
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: #EA1836;
+
+}
+
+.footext1 .mail {
+  margin-top: 18px;
+  text-decoration: underline;
+}
+
+.ftwrap2 {
+  /* background-color: red; */
+  position: absolute;
+  text-align: right;
+  float: right;
+  right: 100px;
+  bottom: 472px;
+}
+
+.footext2 {
+  color: #FFF;
+  display: flex;
+  width: 379.97px;
+  height: 72px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: Outfit;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  float: right;
+  right: 130px;
+  margin-top: 75px;
+  position: absolute;
+  /* background-color: blue; */
+
+
+}
+
+.btnwrap {
+  display: flex;
+  margin-bottom: 130px;
+  margin-right: 150px;
+  position: absolute;
+  bottom: 20px;
+  right: 80px;
+  gap: 10px;
+  /* background-color: #111111; */
+}
+
+
+.btnwrap .btn1 {
+  display: flex;
+  width: 100px;
+  height: 40px;
+  padding: 0px 25.51px 0px 25px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 22px;
+  background: #EA1836;
+  transition: 0.3s;
+
+}
+
+.btnwrap .btn1:hover {
+  transition: 0.3s;
+  border-radius: 22px 22px 0 22px;
+
+}
+
+.btnwrap .btn2 {
+  display: flex;
+  width: 100px;
+  height: 40px;
+  padding: 0px 25.5px 0px 25px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 22px;
+  background: #FFF;
+  color: #111;
+  font-family: 'Pretendard-Regular';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  transition: 0.3s;
+  /* 250% */
+}
+
+.btnwrap .btn2:hover {
+  /* transition: 0.3s; */
+  border-radius: 22px 22px 0 22px;
+  /* transition-timing-function: ease-in-out; */
+}
+
+/* 모바일푸터 */
+
+@media (max-width:720px) {
+
+  .pcft {
+    display: none;
+  }
+
+  .mft {
+    display: block;
+  }
+
+  footer {
+    position: relative;
+    height: 453px;
+  }
+
+  .logocircle a img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 20%;
+    top: 20px;
+  }
+
+  footer .mft .wrap {
+    position: relative;
+    background-color: green;
+  }
+
+  .mft .ftwrap {
+    position: absolute;
+    /* background-color: blue; */
+    margin-left: 38px;
+    top: -80px;
+  }
+
+  .mft .ftwrap .footext1 {
+    /* background-color: #EA1836; */
+  }
+
+  .mft .ftwrap .footext1 div a img {
+    width: 300px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .mft .ftwrap .footext1 h1 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+
+    /* golcompany.co.kr/Inter/Bold 22 */
+    font-family: 'Pretendard-Regular';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .mft .ftwrap .footext1 h2 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: 'Pretendard-Regular';
+    font-size: 14.375px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 194.783% */
+    margin-top: 16px;
+
+  }
+
+  .mft .ftwrap .footext1 h3 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    margin-top: 29px;
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    /* 100% */
+
+  }
+
+  .mft .ftwrap .footext1 h4 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 157.143% */
+    margin-top: 37px;
+
+  }
+
+
+  .btnwrap {
+    display: none;
+    margin-bottom: 3px;
+    margin-right: -14px;
+  }
+
+  .btnwrap .btn,
+  .btnwrap .btn {
+
+    width: 106px;
+    height: 40px;
+    padding: 0px 25.51px 2px 25px;
+    justify-content: center;
+    align-items: center;
+    color: var(--golcompany-co-kr-cod-gray, #111);
+    font-family: 'Pretendard-Regular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    /* 250% */
+  }
+
+
+
+
+
+
+
+
+
+}
+
+
+@media (min-width:721px)and (max-width:1200px) {
+
+  .pcft {
+    display: none;
+  }
+
+  .mft {
+    display: block;
+  }
+
+  footer {
+    position: relative;
+    height: 453px;
+  }
+
+  .logocircle a img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 20%;
+    top: 20px;
+  }
+
+  footer .mft .wrap {
+    position: relative;
+    background-color: green;
+  }
+
+  .mft .ftwrap {
+    position: absolute;
+    /* background-color: blue; */
+    margin-left: 38px;
+    top: -80px;
+  }
+
+  .mft .ftwrap .footext1 {
+    /* background-color: #EA1836; */
+  }
+
+  .mft .ftwrap .footext1 div a img {
+    width: 300px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .mft .ftwrap .footext1 h1 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+
+    /* golcompany.co.kr/Inter/Bold 22 */
+    font-family: 'Pretendard-Regular';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .mft .ftwrap .footext1 h2 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: 'Pretendard-Regular';
+    font-size: 14.375px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    /* 194.783% */
+    margin-top: 16px;
+
+  }
+
+  .mft .ftwrap .footext1 h3 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    margin-top: 29px;
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    /* 100% */
+
+  }
+
+  .mft .ftwrap .footext1 h4 {
+    color: var(--golcompany-co-kr-nero, #FFF);
+    font-family: Outfit;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    /* 157.143% */
+    margin-top: 37px;
+
+  }
+
+
+  .btnwrap {
+    /* display: none; */
+    margin-bottom: 3px;
+    margin-right: -14px;
+  }
+
+  .btnwrap .btn,
+  .btnwrap .btn {
+
+    width: 106px;
+    height: 40px;
+    padding: 0px 25.51px 2px 25px;
+    justify-content: center;
+    align-items: center;
+    color: var(--golcompany-co-kr-cod-gray, #111);
+    font-family: 'Pretendard-Regular';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px;
+    /* 250% */
+  }
+
+
+}
